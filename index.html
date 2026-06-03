@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorilla Jungle — Cases, Upgrade, Rewards</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="jungle-bg" aria-hidden="true">
+    <span class="leaf-layer layer-a"></span>
+    <span class="leaf-layer layer-b"></span>
+    <span class="vine-line vine-a"></span>
+    <span class="vine-line vine-b"></span>
+    <span class="rain-sparks"></span>
+  </div>
+
+  <div class="app-shell">
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#dashboard" aria-label="Gorilla Jungle">
+        <span class="brand-mark">
+          <span class="mini-ape"></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Gorilla Jungle</strong>
+          <small>cases · upgrade · rewards</small>
+        </span>
+      </a>
+
+      <nav class="nav-main" aria-label="Главная навигация">
+        <a href="#cases" data-route-link="cases">Кейсы</a>
+        <a href="#upgrade" data-route-link="upgrade">Upgrade</a>
+        <a href="#inventory" data-route-link="inventory">Инвентарь</a>
+        <a href="#rewards" data-route-link="rewards">Reward Hub</a>
+        <a href="#tournaments" data-route-link="tournaments">Турниры</a>
+        <a href="#events" data-route-link="events">Ивенты</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button notify-btn" id="notificationBtn" type="button" aria-label="Уведомления">
+          <span class="bell-shape"></span>
+          <span class="notify-badge" id="notifyBadge">0</span>
+        </button>
+        <button class="button ghost header-bonus" id="rewardHubBtn" type="button">Бонусы</button>
+        <button class="button ghost header-topup" id="topupBtn" type="button">Пополнить</button>
+        <div class="balance-chip" id="balanceChip">
+          <span>Баланс</span>
+          <strong id="balanceValue">$0.00</strong>
+        </div>
+        <button class="avatar-button" id="profileBtn" type="button" aria-label="Личный кабинет">MJ</button>
+      </div>
+
+      <div class="notification-panel is-hidden" id="notificationPanel">
+        <div class="panel-head">
+          <strong>Уведомления</strong>
+          <button class="text-button" id="markAllReadBtn" type="button">Прочитать все</button>
+        </div>
+        <div class="notification-list" id="notificationList"></div>
+      </div>
+    </header>
+
+    <section class="live-ribbon" aria-label="Live drops">
+      <div class="ribbon-label">
+        <span class="live-dot"></span>
+        Live
+      </div>
+      <div class="live-feed" id="liveFeed"></div>
+    </section>
+
+    <main id="appView" class="app-view" aria-live="polite"></main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Мобильная навигация">
+    <a href="#cases" data-route-link="cases">Кейсы</a>
+    <a href="#upgrade" data-route-link="upgrade">Upgrade</a>
+    <a href="#inventory" data-route-link="inventory">Инвентарь</a>
+    <a href="#rewards" data-route-link="rewards">Бонусы</a>
+    <a href="#profile" data-route-link="profile">ЛК</a>
+  </nav>
+
+  <div class="modal-root" id="modalRoot" aria-live="polite"></div>
+  <div class="toast-root" id="toastRoot" aria-live="assertive"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
